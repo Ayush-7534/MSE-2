@@ -32,7 +32,7 @@ export default function App() {
       default: break;
     }
     return list;
-  }, [searchQuery, priceRange, sortBy]);
+  }, [searchQuery, priceRange, category ,sortBy]);  //bug-2
 
   function addToCart(product) {
     setCartItems(prev => {
