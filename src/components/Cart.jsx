@@ -30,7 +30,7 @@ export default function Cart({ items, onRemove, onClose, onUpdateQty }) {
                       <button
                         className="qty-btn"
                         onClick={() => onUpdateQty(item.id, item.qty - 1)}
-                        disabled={item.qty <= 0}
+                        disabled={item.qty <= 1}  // bug-7
                       >−</button>
                       <span className="qty-value">{item.qty}</span>
                       <button
@@ -59,3 +59,4 @@ export default function Cart({ items, onRemove, onClose, onUpdateQty }) {
     </>
   );
 }
+
